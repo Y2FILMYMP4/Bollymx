@@ -1,0 +1,109 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+
+    .welcome-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .logo h1 {
+      display: flex;
+      justify-content: center;
+      font-size: 5rem;
+      font-weight: bold;
+      color: darkred;
+      overflow: hidden;
+    }
+
+    .animated-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: jumpText 1s ease-out forwards;
+    }
+
+    /* Keyframes for jumping animation (from left to right) */
+    @keyframes jumpText {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+    }
+
+    /* Style for each letter with staggered animation */
+    .animated-text span:nth-child(1) { animation-delay: 0s; }
+    .animated-text span:nth-child(2) { animation-delay: 0.1s; }
+    .animated-text span:nth-child(3) { animation-delay: 0.2s; }
+    .animated-text span:nth-child(4) { animation-delay: 0.3s; }
+    .animated-text span:nth-child(5) { animation-delay: 0.4s; }
+    .animated-text span:nth-child(6) { animation-delay: 0.5s; }
+    .animated-text span:nth-child(7) { animation-delay: 0.6s; }
+
+    /* Fade-out effect for the welcome screen */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 2s ease-out;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BollyMX Welcome Animation</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+   
+  <div class="welcome-container" id="welcome">
+    <div class="logo">
+      <h1 class="animated-text">
+        <span>B</span><span>O</span><span>L</span><span>L</span><span>Y</span><span>M</span><span>X</span>
+      </h1>
+    </div>
+  </div>
+      
+  
+
+  <script>
+    // Add fade-out effect and redirect
+    setTimeout(() => {
+      const welcomeContainer = document.getElementById('welcome');
+
+      // Add the fade-out class for smooth transition
+      welcomeContainer.classList.add('fade-out');
+
+      // Wait for the fade-out animation to complete, then redirect
+      setTimeout(() => {
+        window.location.href = "/homepage.html"; // Change "/homepage.html" to your desired URL
+      }, 2000); // Matches the CSS fade-out duration (2 seconds)
+    }, 7000); // Wait 7 seconds before starting fade-out
+  </script>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/movie logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Flix
+    </title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Bolly<span class="main-color">mx</span>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Genre</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#" class="btn btn-hover">
+                            <span>Sign in</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+      <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Georgia", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+        a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #d8d8d8;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #555;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+            border-radius: 8px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .infobox {
+            float: right;
+            width: 300px;
+            margin: 0 0 10px 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #d8d8d8;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.9rem;
+            animation: slideInFromRight 1s ease-out;
+        }
+        .infobox img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in;
+        }
+        .infobox table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        .infobox th, .infobox td {
+            padding: 5px;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        .infobox th {
+            text-align: left;
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #d8d8d8;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #202122;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #d8d8d8;
+            animation: slideUp 1.2s ease-in;
+        }
+        footer p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        footer a {
+            color: #0645ad;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    
+        <h1>Pushpa 2: The Rule</h1>
+        <p>Welcome to Y2FILMYMP4 </p>
+   
+    <div class="content">
+        <!-- InfoBox -->
+        <div class="infobox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAodcb3t9uMtbqIZ_JlnDMcko4N5OYUf5swA&usqp=CAU" alt="Pushpa 2 Poster">
+            <table>
+                <tr>
+                    <th>Directed by</th>
+                    <td>kelly marcel</td>
+                </tr>
+                <tr>
+                    <th>Produced by</th>
+                    <td>
+Avi Arad,
+Matt Tolmach,
+Amy Pascal,
+Kelly Marcel,
+Tom Hardy,
+Hutch Parker</td>
+                </tr>
+                <tr>
+                    <th>Starring</th>
+                    <td>Tom Hardy,
+Chiwetel Ejiofor,
+Juno Temple,
+Rhys Ifans,
+Stephen Graham,
+Peggy Lu,
+Clark Backo,
+Alanna Ubach,
+Andy Serkis</td>
+                </tr>
+                <tr>
+                    <th>Release date</th>
+                    <td>October 21, 2024 (New York City)
+October 25, 2024 (United States)</td>
+                </tr>
+                <tr>
+                    <th>Running time</th>
+                    <td>109 minutes</td>
+                </tr>
+                <tr>
+                    <th>Language</th>
+                    <td>English/hindi</td>
+                </tr>
+             <tr>
+                    <th>posted by</th>
+                    <td>Bollymx</td>
+             </tr>
+                <tr>
+                    <th>size</th>
+                    <td>273.6 MB</td>
+                </tr>
+                 <tr>
+                    <th>Budget</th>
+                    <td>$120 million</td>
+                </tr>
+                 <tr>
+                    <th>Box Office</th>
+                    <td>$472.8 million</td>
+                </tr>
+                  
+                 <tr>
+                    <th>country</th>
+                    <td>United States</td>
+                </tr>
+                
+                
+                </tr>
+                  
+                </tr>
+            </table>
+        </div>
+        <style>   .icon-box {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon-button:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: left 0.3s ease;
+    }
+
+    .icon-button:hover::before {
+      left: 100%;
+    }
+
+    .icon-button.share {
+      background: linear-gradient(90deg, #28a745, #1c7430);
+    }
+  </style>
+    
+
+        <!-- video box -->
+          <div class="button-box">
+              
+  <div class="icon-box">
+    <button class="icon-button download" onclick="downloadFile()">
+      <i class="fas fa-download"></i>
+    </button>
+    <button class="icon-button share" onclick="shareContent()">
+      <i class="fas fa-share-alt"></i>
+    </button>
+      <style>  
+    .button-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px 
+      background: whitesmoke;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      
+    }
+    .button-box button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .button-box .download-btn {
+      background-color: orangered;
+      color: none;
+      
+    }
+    .button-box .download-btn:hover {
+      background-color: red;
+    }
+    .button-box .share-btn {
+      background-color: ;
+      
+    
+    }
+    .button-box .share-btn:hover {
+      background-color:none;
+      
+    }
+</style>
+<! ----popup botton css---->
+<style>
+            #openPlayerBtn {
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#closeBtn {
+  position: right;
+  top: 500px;
+  right: 20px;
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+   .ad-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 18px;
+            display: none;
+        }
+
+.episode-selector {
+  margin: 15px 0;
+}
+
+.episode-selector label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text : center;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.download-btn:hover {
+  background-color: orangered;
+}
+
+@media (max-width: 600px) {
+  .popup-content {
+    width: 95%;
+  }
+
+  #closeBtn {
+    top: 10px;
+    right: 15px;
+  }
+}
+</style>
+
+  
+ 
+                  <!-- Button to open the video player -->
+<button id="openPlayerBtn">Watch Now</button>
+
+<!-- Pop-up video player -->
+<div id="videoPlayerPopup" class="popup">
+  <div class="popup-content">
+    <span id="closeBtn">&times;</span>
+    
+    <!-- Video element -->
+    <video id="videoPlayer" controls
+     controlsList="nodownload" oncontextmenu="return false;"poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30MVXB4fFgJTRq95CSoFU4uUv8bQ_DoX5YA&usqp=CAU"> <source id="videoSource" src="https://dl.dropboxusercontent.com/scl/fi/hynklhptyv0nufp6zczev/Venom-The-Last-Dance-2024-WebRip-720p-Hindi-English-AAC-5.1-x264-ESub-TG-HindiHDMoviesOTT-1-480P-version.mov?rlkey=297epzl83gw18v86uv0o5aw6q&st=wef9v8df&dl=0" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>pushpa 2 the rule Full HD Full movie 1080p [Bollymx]</h3>
+
+
+   </div>
+
+
+  </div>
+</div>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const openPlayerBtn = document.getElementById("openPlayerBtn");
+  const videoPlayerPopup = document.getElementById("videoPlayerPopup");
+  const closeBtn = document.getElementById("closeBtn");
+  const episodes = document.getElementById("episodes");
+  const videoPlayer = document.getElementById("videoPlayer");
+  const videoSource = document.getElementById("videoSource");
+  const downloadBtn = document.getElementById("downloadBtn");
+
+  // Open the video player pop-up
+  openPlayerBtn.addEventListener("click", () => {
+    videoPlayerPopup.style.display = "block";
+  });
+
+  // Close the video player pop-up
+  closeBtn.addEventListener("click", () => {
+    videoPlayerPopup.style.display = "none";
+    videoPlayer.pause();
+  });
+
+  // Change video and download link based on the selected episode
+  episodes.addEventListener("change", (e) => {
+    const selectedEpisode = e.target.value;
+    videoSource.src = selectedEpisode;
+    videoPlayer.load();
+    downloadBtn.href = selectedEpisode;
+  });
+});
+</script>
+
+    <div class="container">
+<!-- Cast Section -->
+        <!-- Cast Section -->
+  ▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▱▰▱▰   
+        <ul>
+            <li><strong>Tom Hardy</strong> as Eddie brock/ venom</li>
+            <li><strong>Chiwetel Ejiofor </strong> as Rex Strickland: A commander</li>
+            <li><strong>Juno Temple </strong>as Dr. Teddy Paine</li>
+            <li><strong>Rhys Ifans </strong>  as Martin Moon</li>
+        </ul>
+  ▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▱▰▱▰▱         
+
+              <!-- Production Section -->
+        <h2>Production</h2>
+        <h6>
+            Hardy revealed in August 2018 that he was signed on to appear in a third and final Venom film and Sony Pictures began development by December 2021 after the second film was released. Marcel and Hardy were writing the script by June 2022, and Marcel was set to make her directorial debut with the film that October. New cast members, including Ejiofor and Temple, joined in mid-2023 and filming began at the end of June 2023 in Spain. Production was halted the next month due to the 2023 SAG-AFTRA strike, and resumed that November after the strike ended. The film was completed by the end of February 2024 and its title was revealed a month later.
+
+Venom: The Last Dance premiered at the Regal Times Square theater in New York City on October 21, 2024, and was released in the United States on October 25. The film received mixed reviews from critics and has grossed $472 million worldwide, making it the ninth-highest-grossing film of 2024.
+        </h6>
+      
+
+        <!-- Release Section -->
+        <h2>Reception</h2>
+        <h8>
+          As of December 8, 2024, Venom: The Last Dance has grossed $139.1 million in the United States and Canada, and $333.7 million in other territories, for a worldwide total of $472.8 million.[3][4]
+
+In the United States and Canada, Venom: The Last Dance was released alongside Conclave, and was projected to gross around $65 million from 4,125 theaters in its opening weekend.[2] The film made $22 million on its first day, including $8.5 million from Thursday night previews.[57] It went onto debut to $51 million, finishing in first but marking the lowest opening of the series. Deadline Hollywood attributed the underperformance to the ongoing 
+
+        
+    </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+            </div>
+    </div>
+        
+        
+                  <div class="top-movies-slide">
+            <div class="owl-carousel" id="top-movies-slide">
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_rJNkHpC3Z_h96H_tfkN0-3HHtZEV0N2HfQ&usqp=CAU" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            peggy lu
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzIu4xYni_Inn_C3eCeJ4ACt9SbdRh4-cmrw&usqp=CAU" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Rashmika Mandna
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1IfggWsMIOd6VfNMx3pv8iNGNVPHOQQSpAg&usqp=CAU" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Faahad Fasil
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtywRFh2Gy9Vjv1pIGZZZuVFWInR12T23OjzLHUIUZYhxTJGnV56MvTxs&s=10" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            sunil (sauth acter)
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR41xJbbUm1COhY8brAB1RrwcNwbqMjk_NRCQ&usqp=CAU" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Anasuya Bhardvaj
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0Cy3i22hKH0NJAX2nx-xzU-U4TQ7qevdPQ&usqp=CAU" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            sreeleela (Actress)
+                           
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+        <!-- END TOP MOVIES SLIDE -->
+    </div>
+    <!-- END HERO SECTION -->
+       
+
+
+    </div>
+</div>
+
+      <style>
+          
+.comment-section {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#commentsContainer {
+  margin-top: 20px;
+}
+
+.comment {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.comment .name {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment .text {
+  margin-top: 5px;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+<style>.comment {
+  position: relative;
+  padding: 10px 40px 10px 10px; /* Space for delete icon */
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.comment .name {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment .text {
+  margin-top: 5px;
+  color: #555;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #e53935;
+}
+</style>
+</div>
+</div>
+
+  <div class="comment-section">
+    <h2>Leave a Comment</h2>
+    <form id="commentForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="comment" placeholder="Your Comment" required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+    <div id="commentsContainer"></div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+  const commentForm = document.getElementById("commentForm");
+  const commentsContainer = document.getElementById("commentsContainer");
+
+  // Load existing comments from local storage
+  const loadComments = () => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    commentsContainer.innerHTML = ""; // Clear previous comments
+    comments.forEach((comment) => displayComment(comment.name, comment.text));
+  };
+
+  // Display a single comment
+  const displayComment = (name, text) => {
+    const commentDiv = document.createElement("div");
+    commentDiv.className = "comment";
+    commentDiv.innerHTML = `
+      <p class="name">${name}</p>
+      <p class="text">${text}</p>
+    `;
+    commentsContainer.appendChild(commentDiv);
+  };
+
+  // Add a new comment
+  const addComment = (name, text) => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ name, text });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    displayComment(name, text);
+  };
+
+  // Form submit event
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById("name");
+    const commentInput = document.getElementById("comment");
+
+    const name = nameInput.value.trim();
+    const text = commentInput.value.trim();
+
+    if (name && text) {
+      addComment(name, text);
+      nameInput.value = "";
+      commentInput.value = "";
+    }
+  });
+
+  // Initial load of comments
+  loadComments();
+});
+</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const commentForm = document.getElementById("commentForm");
+  const commentsContainer = document.getElementById("commentsContainer");
+
+  // Load existing comments from local storage
+  const loadComments = () => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    commentsContainer.innerHTML = ""; // Clear previous comments
+    comments.forEach((comment, index) => displayComment(comment.name, comment.text, index));
+  };
+
+  // Display a single comment
+  const displayComment = (name, text, index) => {
+    const commentDiv = document.createElement("div");
+    commentDiv.className = "comment";
+    commentDiv.setAttribute("data-index", index); // Store the index for deletion
+    commentDiv.innerHTML = `
+      <p class="name">${name}</p>
+      <p class="text">${text}</p>
+      <button class="delete-btn" title="Delete Comment">&times;</button>
+    `;
+    commentsContainer.appendChild(commentDiv);
+
+    // Add event listener for delete button
+    const deleteBtn = commentDiv.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => deleteComment(index));
+  };
+
+  // Add a new comment
+  const addComment = (name, text) => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ name, text });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    displayComment(name, text, comments.length - 1);
+  };
+
+  // Delete a comment
+  const deleteComment = (index) => {
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.splice(index, 1); // Remove the comment at the specified index
+    localStorage.setItem("comments", JSON.stringify(comments));
+    loadComments(); // Refresh the comments display
+  };
+
+  // Form submit event
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById("name");
+    const commentInput = document.getElementById("comment");
+
+    const name = nameInput.value.trim();
+    const text = commentInput.value.trim();
+
+    if (name && text) {
+      addComment(name, text);
+      nameInput.value = "";
+      commentInput.value = "";
+    }
+  });
+
+  // Initial load of comments
+  loadComments();
+});
+</script>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+ <footer>
+        <p>© 2024 Bollymx . All rights reserved.</p>
+    </footer>
+    <!-- END COPYRIGHT SECTION -->
+
+    <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="app.js"></script>
+   <script>
+    // Function to download a file
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'https://dl.dropboxusercontent.com/scl/fi/hae91sggyr24dddu3s0bc/Pushpa-2-The-Rule-2024-Hindi-PreDVD-480p-x264-AAC-CineVo.mkv?rlkey=9nwz6an7y5aw4anbctqvwi03r&st=xfsx2cdc&dl=0'; // Replace with your file URL
+      link.download = 'pushpa 2 hd movie bollymx'; // Replace with your file name
+      link.click();
+           alert('coming soon...🎉🎉🎉!');
+       }
+       
+    // Function to share content
+    function shareContent() {
+      if (navigator.share) {
+        navigator.share({
+          title: '',
+          text: '',
+          url: window.location.href,
+        }).then(() => {
+          alert('Content shared successfully!');
+        }).catch((error) => {
+          console.error('Error sharing:', error);
+        });
+      } else {
+        alert('Web Share API not supported in your browser.');
+      }
+    }
+  </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  </body>
+  
+
+</html>

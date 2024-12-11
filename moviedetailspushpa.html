@@ -715,6 +715,251 @@ select {
 
 
     </div>
+
+      <style>body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+}
+
+.comment-section {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#commentsContainer {
+  margin-top: 20px;
+}
+
+.comment {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.comment .name {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment .text {
+  margin-top: 5px;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+<style>.comment {
+  position: relative;
+  padding: 10px 40px 10px 10px; /* Space for delete icon */
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.comment .name {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment .text {
+  margin-top: 5px;
+  color: #555;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ff5252;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #e53935;
+}
+</style>
+
+  <div class="comment-section">
+    <h2>Comment Section</h2>
+    <form id="commentForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="comment" placeholder="Your Comment" required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+    <div id="commentsContainer"></div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+  const commentForm = document.getElementById("commentForm");
+  const commentsContainer = document.getElementById("commentsContainer");
+
+  // Load existing comments from local storage
+  const loadComments = () => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    commentsContainer.innerHTML = ""; // Clear previous comments
+    comments.forEach((comment) => displayComment(comment.name, comment.text));
+  };
+
+  // Display a single comment
+  const displayComment = (name, text) => {
+    const commentDiv = document.createElement("div");
+    commentDiv.className = "comment";
+    commentDiv.innerHTML = `
+      <p class="name">${name}</p>
+      <p class="text">${text}</p>
+    `;
+    commentsContainer.appendChild(commentDiv);
+  };
+
+  // Add a new comment
+  const addComment = (name, text) => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ name, text });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    displayComment(name, text);
+  };
+
+  // Form submit event
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById("name");
+    const commentInput = document.getElementById("comment");
+
+    const name = nameInput.value.trim();
+    const text = commentInput.value.trim();
+
+    if (name && text) {
+      addComment(name, text);
+      nameInput.value = "";
+      commentInput.value = "";
+    }
+  });
+
+  // Initial load of comments
+  loadComments();
+});
+</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const commentForm = document.getElementById("commentForm");
+  const commentsContainer = document.getElementById("commentsContainer");
+
+  // Load existing comments from local storage
+  const loadComments = () => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    commentsContainer.innerHTML = ""; // Clear previous comments
+    comments.forEach((comment, index) => displayComment(comment.name, comment.text, index));
+  };
+
+  // Display a single comment
+  const displayComment = (name, text, index) => {
+    const commentDiv = document.createElement("div");
+    commentDiv.className = "comment";
+    commentDiv.setAttribute("data-index", index); // Store the index for deletion
+    commentDiv.innerHTML = `
+      <p class="name">${name}</p>
+      <p class="text">${text}</p>
+      <button class="delete-btn" title="Delete Comment">&times;</button>
+    `;
+    commentsContainer.appendChild(commentDiv);
+
+    // Add event listener for delete button
+    const deleteBtn = commentDiv.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => deleteComment(index));
+  };
+
+  // Add a new comment
+  const addComment = (name, text) => {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ name, text });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    displayComment(name, text, comments.length - 1);
+  };
+
+  // Delete a comment
+  const deleteComment = (index) => {
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.splice(index, 1); // Remove the comment at the specified index
+    localStorage.setItem("comments", JSON.stringify(comments));
+    loadComments(); // Refresh the comments display
+  };
+
+  // Form submit event
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById("name");
+    const commentInput = document.getElementById("comment");
+
+    const name = nameInput.value.trim();
+    const text = commentInput.value.trim();
+
+    if (name && text) {
+      addComment(name, text);
+      nameInput.value = "";
+      commentInput.value = "";
+    }
+  });
+
+  // Initial load of comments
+  loadComments();
+});
+</script>
     <!-- END FOOTER SECTION -->
 
     <!-- COPYRIGHT SECTION -->

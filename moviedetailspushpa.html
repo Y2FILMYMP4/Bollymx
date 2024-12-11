@@ -743,8 +743,8 @@ select {
     function shareContent() {
       if (navigator.share) {
         navigator.share({
-          title: '#',
-          text: '#',
+          title: '',
+          text: '',
           url: window.location.href,
         }).then(() => {
           alert('Content shared successfully!');
